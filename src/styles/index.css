@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgba(169, 169, 169, 0.459);
+}
+
+.wrapper {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr minmax( 1000px, 1000px ) 1fr;
+    margin: 2rem auto;
+}
+
+.wrapper h1, .calculator {
+    grid-column: 2/3;
+    margin: 0 auto;
+}
+
+.calculator {
+    width: 800px;
+    border: 10px solid rgba(6, 6, 172, 0.767);
+    box-shadow: 10px 5px 5px rgb(141, 131, 131);
+    border-radius: 15px;
+    background-color: rgb(102, 102, 102);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.display-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    position: relative;
+    grid-column: 1/5;
+    height: 92px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.display span {
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 747px;
+    overflow:hidden;
+    color: white;
+    font-size: 3em;
+    padding: 0rem 1rem 0rem 2rem;
+}
+
+.display span.memory-display {
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    justify-content: flex-start;
+    width: 747px;
+    overflow: hidden;
+    color: white;
+    font-size: 2em;
+    padding: 0rem 0rem 0rem 1rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat( 5, 143px );
+    grid-template-rows: repeat( 6, 100px );
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.buttons button {
+    cursor: pointer;
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+}
+
+.buttons button:hover,
+.buttons button:active {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.274);
+    color: white;
+}
+
+.ac {
+    grid-column: 1/4;
+    grid-row: 6/7;
+    background-color: rgba(167, 1, 1, 0.795);
+    color: white;
+}
+
+
+.c {
+    grid-column: 4/6;
+    grid-row: 6/7;
+    background-color: rgba(167, 1, 1, 0.795);
+    color: white;
+}
+
+button.ac:hover,
+button.c:hover {
+    background-color: rgba(109, 3, 109, 0.733);
+}
+
+.seven {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.eight {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.nine {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.four {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.five {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.six {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.one {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.two {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.three {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.zero {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.multiply {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+.divide {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+.add {
+    grid-column: 5/6;
+    grid-row: 4/5;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+.subtract {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+.decimal {
+    grid-column: 1/2;
+    grid-row: 5/6
+}
+
+.sign {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+.sqrt {
+    grid-column: 5/6;
+    grid-row: 3/4;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+.percent {
+    grid-column: 5/6;
+    grid-row: 2/3;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+button.subtract:hover,
+button.add:hover,
+button.divide:hover,
+button.multiply:hover,
+button.sqrt:hover,
+button.percent:hover {
+    background-color: rgba(4, 4, 185, 0.87);
+}
+
+.equal {
+    grid-column: 4/6;
+    grid-row: 5/6;
+    background-color: rgb(235, 163, 29);
+    color: white;
+}
+
+button.equal:hover {
+    background-color: rgba(2, 114, 2, 0.877);
+    color: white;
+}
+
+.ms {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: rgb(53, 139, 209);
+    color: white;
+}
+
+.mr {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: rgb(53, 139, 209);
+    color: white;
+}
+
+.mc {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: rgb(53, 139, 209);
+    color: white;
+}
+
+.mp {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-color: rgb(53, 139, 209);
+    color: white;
+}
+
+.mm {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    background-color: rgb(53, 139, 209);
+    color: white;
+}
+
+button.ms:hover,
+button.mr:hover,
+button.mc:hover,
+button.mp:hover,
+button.mm:hover {
+    background-color: rgba(7, 192, 192, 0.863);
+}
+
